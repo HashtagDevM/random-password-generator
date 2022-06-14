@@ -1,5 +1,3 @@
-const passwordEl = document.getElementById("password");
-
 const characters = [
 	"A",
 	"B",
@@ -105,14 +103,8 @@ function generateRandomPassword() {
 	let randomPassword = "";
 	for (let i = 0; i < passwordLength; i++) {
 		randomPassword += getRandomCharacter();
-	} 
+	}
 	return randomPassword;
 }
 
 const generatedPassword = generateRandomPassword();
-
-passwordEl.textContent += generatedPassword;
-
-generate.addEventListener("click", function()) {
-	console.log("Hello")
-}
