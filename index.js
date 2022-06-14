@@ -1,30 +1,6 @@
-let characters = [
-	"a",
-	"b",
-	"c",
-	"d",
-	"e",
-	"f",
-	"g",
-	"h",
-	"i",
-	"j",
-	"k",
-	"l",
-	"m",
-	"n",
-	"o",
-	"p",
-	"q",
-	"r",
-	"s",
-	"t",
-	"u",
-	"v",
-	"w",
-	"x",
-	"y",
-	"z",
+const passwordEl = document.getElementById("password");
+
+const characters = [
 	"A",
 	"B",
 	"C",
@@ -51,6 +27,32 @@ let characters = [
 	"X",
 	"Y",
 	"Z",
+	"a",
+	"b",
+	"c",
+	"d",
+	"e",
+	"f",
+	"g",
+	"h",
+	"i",
+	"j",
+	"k",
+	"l",
+	"m",
+	"n",
+	"o",
+	"p",
+	"q",
+	"r",
+	"s",
+	"t",
+	"u",
+	"v",
+	"w",
+	"x",
+	"y",
+	"z",
 	"0",
 	"1",
 	"2",
@@ -61,6 +63,8 @@ let characters = [
 	"7",
 	"8",
 	"9",
+	"~",
+	"`",
 	"!",
 	"@",
 	"#",
@@ -69,4 +73,46 @@ let characters = [
 	"^",
 	"&",
 	"*",
+	"(",
+	")",
+	"_",
+	"-",
+	"+",
+	"=",
+	"{",
+	"[",
+	"}",
+	"]",
+	",",
+	"|",
+	":",
+	";",
+	"<",
+	">",
+	".",
+	"?",
+	"/",
 ];
+
+let passwordLength = 16;
+
+function getRandomCharacter() {
+	let randomChar = Math.floor(Math.random() * characters.length);
+	return characters[randomChar];
+}
+
+function generateRandomPassword() {
+	let randomPassword = "";
+	for (let i = 0; i < passwordLength; i++) {
+		randomPassword += getRandomCharacter();
+	} 
+	return randomPassword;
+}
+
+const generatedPassword = generateRandomPassword();
+
+passwordEl.textContent += generatedPassword;
+
+generate.addEventListener("click", function()) {
+	console.log("Hello")
+}
