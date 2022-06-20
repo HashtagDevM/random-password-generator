@@ -97,7 +97,7 @@ const characters = [
 	"/",
 ];
 
-let passwordLength = 16;
+let passwordLength = 15;
 
 generateNewPswd.addEventListener("click", function () {
 	function getRandomCharacter() {
