@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -14,12 +13,13 @@
 		<link rel="stylesheet" href="index.css" />
 		<title>Random Password Generator</title>
 	</head>
+
 	<body>
 		<div class="container">
 			<h1>Generate a <br /><span>random password</span></h1>
 			<p>Never use an insecure password again.</p>
 
-			<button id="generate">
+			<button id="generateNewPswd">
 				<img class="lock" src="img/generate.png" alt="icon" />
 				Generate passwords
 			</button>
@@ -27,16 +27,16 @@
 			<div class="border"></div>
 
 			<div class="password-container">
-				<div id="password" class="password-box-1" onclick="newPassword()">
+				<div id="passwordOne" class="password-box-1" onclick="newPassword()">
 					<img class="no-password" src="img/dots.png" alt="dots" />
 				</div>
-				<div id="password" class="password-box-2" onclick="newPassword()">
+				<div id="passwordTwo" class="password-box-2" onclick="newPassword()">
 					<img class="no-password" src="img/dots.png" alt="dots" />
 				</div>
-				<div id="password" class="password-box-3" onclick="newPassword()">
+				<div id="passwordThree" class="password-box-3" onclick="newPassword()">
 					<img class="no-password" src="img/dots.png" alt="dots" />
 				</div>
-				<div id="password" class="password-box-4" onclick="newPassword()">
+				<div id="passwordFour" class="password-box-4" onclick="newPassword()">
 					<img class="no-password" src="img/dots.png" alt="dots" />
 				</div>
 			</div>

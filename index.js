@@ -1,3 +1,8 @@
+const passwordOneEl = document.getElementById("passwordOne");
+const passwordTwoEl = document.getElementById("passwordTwo");
+const passwordThreeEl = document.getElementById("passwordThree");
+const passwordFourEl = document.getElementById("passwordFour");
+
 const characters = [
 	"A",
 	"B",
@@ -94,17 +99,27 @@ const characters = [
 
 let passwordLength = 16;
 
-function getRandomCharacter() {
-	let randomChar = Math.floor(Math.random() * characters.length);
-	return characters[randomChar];
-}
-
-function generateRandomPassword() {
-	let randomPassword = "";
-	for (let i = 0; i < passwordLength; i++) {
-		randomPassword += getRandomCharacter();
+generateNewPswd.addEventListener("click", function () {
+	function getRandomCharacter() {
+		let randomChar = Math.floor(Math.random() * characters.length);
+		return characters[randomChar];
 	}
-	return randomPassword;
-}
 
-const generatedPassword = generateRandomPassword();
+	function generateRandomPassword() {
+		let randomPassword = "";
+		for (let i = 0; i < passwordLength; i++) {
+			randomPassword += getRandomCharacter();
+		}
+		return randomPassword;
+	}
+
+	const generatedPasswordOne = generateRandomPassword();
+	const generatedPasswordTwo = generateRandomPassword();
+	const generatedPasswordThree = generateRandomPassword();
+	const generatedPasswordFour = generateRandomPassword();
+
+	passwordOneEl.innerText = generatedPasswordOne;
+	passwordTwoEl.innerText = generatedPasswordTwo;
+	passwordThreeEl.innerText = generatedPasswordThree;
+	passwordFourEl.innerText = generatedPasswordFour;
+});
