@@ -113,8 +113,8 @@ generatePasswords.addEventListener("click", function () {
 	}
 
 	const randomPasswordOne = generateRandomPassword();
-	passwordOneEl.innerText = randomPasswordOne;
+	passwordOneEl.textContent = randomPasswordOne;
 
 	const randomPasswordTwo = generateRandomPassword();
-	passwordTwoEl.innerText = randomPasswordTwo;
+	passwordTwoEl.textContent = randomPasswordTwo;
 });
